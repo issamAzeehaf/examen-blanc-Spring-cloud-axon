@@ -86,14 +86,12 @@ public class InfractionServiceHandler {
         vehicule.setModele(event.getModele());
         String ownerId = event.getProprietaire();
         vehicule.setProprietaire(proprietaireRepository.findById(ownerId).get());
-        vehicule.setPuissance(event.getPuissance());vehicule.setProprietaireId(event.getProprietaire());
+        vehicule.setPuissance(event.getPuissance());vehicule.setProprietaire_Id(event.getProprietaire());
         vehiculeRepository.save(vehicule);
 
     }
     @EventHandler
     public void on(ProprietaireCreatedEvent event) {
-        log.info("OwnerCreatedEvent: {}");
-        System.out.println("OwnerCreatedEvent: {}");
         Proprietaire proprietaire = new Proprietaire();
         proprietaire.setId(UUID.randomUUID().toString());
         proprietaire.setName(event.getName());

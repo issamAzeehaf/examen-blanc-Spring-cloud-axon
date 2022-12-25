@@ -9,7 +9,7 @@
         <module name="gateway-service" />
         <module name="config-service" />
       </profile>
-      <profile name="Annotation profile for immatriculation-service" enabled="true">
+      <profile name="Annotation profile for infraction-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -19,8 +19,8 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
         </processorPath>
         <module name="radar-service" />
-        <module name="immatriculation-service" />
         <module name="infraction-service" />
+        <module name="immatriculation-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
