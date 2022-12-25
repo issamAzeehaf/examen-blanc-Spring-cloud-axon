@@ -36,4 +36,6 @@ public class RadarAggregate {
         this.latitude = radarCreatedEvent.getLatitude();
     }
 
+
+
 }
