@@ -1,0 +1,19 @@
+package ma.azehaf.infractionservice.commonapi.events;
+
+import lombok.Getter;
+
+import java.util.Date;
+
+public class ProprietaireCreatedEvent extends BaseEvent<String>{
+    @Getter
+    public String name;
+    @Getter public Date dateOfBirth;
+    @Getter public String email;
+
+    public ProprietaireCreatedEvent(String id, String name, Date dateOfBirth, String email) {
+        super(id);
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.email = email;
+    }
+}
